@@ -19,7 +19,7 @@ angular.module('app.controllers', [])
             }
         }
         
-        $scope.inrement = function () {
+        $scope.increment = function () {
             $scope.posts.like+=1;
         }
     })
