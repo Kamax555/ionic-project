@@ -1,3 +1,4 @@
+<div ng-app>
 <ion-view title="Instagram" id="page2">
   <ion-nav-buttons side="left" class="has-header">
     <button class="button button-icon icon ion-android-camera"></button>
@@ -5,16 +6,17 @@
   <ion-nav-buttons side="right" class="has-header">
     <button class="button button-icon icon ion-android-send"></button>
   </ion-nav-buttons>
+    <div ng-controller="HomeCtrl">
     <ion-content padding="true" class="has-header" ng-init="showPosts()">
         <div class="list" ng-repeat="post in posts">
         <div id="homePage-button-bar1" class="button-bar">
         <div class="list card" id="homePage-card22">
             <ion-item class="item-avatar item-icon-right" id="homePage-list-item8">
-                <img src="{{post[$index].avatar}}">
-                <h2 style="font-size: 0.8em">{{posts.username}}</h2>
+                <img src="{{posts[$index].avatar}}">
+                <h2 style="font-size: 0.8em">{{post.username}}</h2>
                 <i class="icon ion-android-more-vertical"></i>
             </ion-item>
-            <img ng-src="{{post[$index].picture}}" style="width:100%" />
+            <img ng-src="{{posts[$index].picture}}" style="width:100%" />
         </div>
         </div>
         <button id="homePage-button14" class="button button-light  icon ion-ios-heart-outline"></button>
@@ -28,5 +30,7 @@
             <p><b>{{post.commenter}}</b> {{post.comment}}</p>
         </div>
          </div>
+</div>
+</div>
 </ion-content>
 </ion-view>
