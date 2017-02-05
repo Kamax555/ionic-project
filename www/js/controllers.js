@@ -9,7 +9,7 @@ angular.module('app.controllers', [])
                     , avatar: "http://trump.frost.works/images/avatar.png"
                     , username: "DonaldTrump"
                     , picture: "http://static6.businessinsider.com/image/55918b77ecad04a3465a0a63/nbc-fires-donald-trump-after-he-calls-mexicans-rapists-and-drug-runners.jpg"
-                    , caption: "DonaldTrump I will make America great again!"
+                    , caption: "I will make America great again!"
                     , commentsNumber: 20
                     , like: 1000
                     , commenter: "TheLegend27"
