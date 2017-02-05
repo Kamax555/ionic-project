@@ -18,6 +18,10 @@ angular.module('app.controllers', [])
                 });
             }
         }
+        
+        $scope.inrement = function () {
+            $scope.posts.like+=1;
+        }
     })
 
   .controller('homePageCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller

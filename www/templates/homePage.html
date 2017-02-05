@@ -19,7 +19,7 @@
             <img ng-src="{{posts[$index].picture}}" style="width:100%" />
         </div>
         </div>
-        <button id="homePage-button14" class="button button-light  icon ion-ios-heart-outline"></button>
+        <button id="homePage-button14" class="button button-light  icon ion-ios-heart-outline" ng-click="increment()"></button>
         <a ui-sref="tabsController.comments" id="homePage-button15" class="button button-light  icon ion-ios-chatbubble-outline"></a>
             <button id="homePage-button17" style="text-align:left;" class="button button-light button-small button-block icon-left ion-heart">
             <p><b>{{post.like}} likes</b></p>
