@@ -22,11 +22,11 @@
         <button id="homePage-button14" class="button button-light  icon ion-ios-heart-outline"></button>
         <a ui-sref="tabsController.comments" id="homePage-button15" class="button button-light  icon ion-ios-chatbubble-outline"></a>
             <button id="homePage-button17" style="text-align:left;" class="button button-light button-small button-block icon-left ion-heart">
-            <p><b>{{post.like}} likes</p></b>
+            <p><b>{{post.like}} likes</b></p>
             </button>
         <div style="font-size: 0.9em">
-            <p style="display:inline"><b>{{post.username}}</b> &nbsp; {{post.caption}}</p> 
-            <a ui-sref="tabsController.comments" id="homePage-button15" class="button button-light">
+            <p style="display:inline"><b>{{post.username}}</b> &nbsp; {{post.caption}}</p>
+            <a ui-sref="tabsController.comments" id="homePage-button15" style="text-decoration: none">
             <p style="font-size:0.9em; color:lightslategrey">View all {{post.commentsNumber}} comments</p>
             </a>
             <p><b>{{post.commenter}}</b> {{post.comment}}</p>
