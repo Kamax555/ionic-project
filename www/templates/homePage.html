@@ -26,7 +26,9 @@
             </button>
         <div style="font-size: 0.9em">
             <p style="display:inline"><b>{{post.username}}</b> &nbsp; {{post.caption}}</p> 
+            <a ui-sref="tabsController.comments" id="homePage-button15" class="button button-light">
             <p style="font-size:0.9em; color:lightslategrey">View all {{post.commentsNumber}} comments</p>
+            </a>
             <p><b>{{post.commenter}}</b> {{post.comment}}</p>
             <p style="color:lightslategrey">{{post.postedTime}} hours ago</p>
         </div>
