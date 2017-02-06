@@ -30,7 +30,18 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('tabsController.addTab', {
+      .state('tabsController.searchTab2', {
+          url: '/searchTab2',
+          views: {
+              'tab2': {
+                  templateUrl: 'templates/searchTab2.html',
+                  controller: 'searchTab2Ctrl'
+              }
+          }
+      })
+
+
+      .state('tabsController.addTab', {
     url: '/add',
     views: {
       'tab3': {
