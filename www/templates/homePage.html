@@ -19,14 +19,13 @@
             <img ng-src="{{posts[$index].picture}}" style="width:100%" />
         </div>
         </div>
-        <button id="homePage-button14" class="button button-light  icon ion-ios-heart-outline" ng-click="increment()"></button>
+        <div  ng-controller="LikeCtrl">
+        <button ng-click="likeClick()" ng-init="likeCount=5" id="homePage-button14" class="button button-light  icon ion-ios-heart-outline" ></button>
         <a ui-sref="tabsController.comments" id="homePage-button15" class="button button-light  icon ion-ios-chatbubble-outline"></a>
             <button id="homePage-button17" style="text-align:left;" class="button button-light button-small button-block icon-left ion-heart">
-            <p><b>{{post.like}} likes</b></p>
+            <p><b>{{likeCount}} {{likes}}</b></p>
             </button>
-          <div  ng-controller="LikeCtrl">
-             <button ng-click="likeClick()" ng-init="liked='Like'; likeCount=0">{{liked}} {{likeCount}}</button>
-          </div>
+        </div>    
         <div style="font-size: 0.9em">
             <p style="display:inline"><b>{{post.username}}</b> &nbsp; {{post.caption}}</p>
             <a ui-sref="tabsController.comments" id="homePage-button15" style="text-decoration: none">

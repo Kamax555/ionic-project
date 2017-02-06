@@ -23,6 +23,7 @@ angular.module('app.controllers', [])
 .controller('LikeCtrl', function ($scope) {
 
     var hasLiked = false;
+    var likes = 'like';
     $scope.likeClick = function () {
         if (!hasLiked) {
             hasLiked = true;
@@ -33,7 +34,14 @@ angular.module('app.controllers', [])
             $scope.liked = 'Like';
             $scope.likeCount -= 1;
         }
-
+        
+    if($scope.likeCount <=1) {
+        $scope.likes = 'like';
+    }    
+    else {
+        $scope.likes = 'likes';
+    }
+    return likes; 
 }
 })
 
