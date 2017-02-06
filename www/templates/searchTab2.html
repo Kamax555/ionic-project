@@ -9,7 +9,41 @@
                   <input type="search" placeholder="Search">
               </label>
           </div>
+          <div ng-controller="PanelController as panel">
+            <section>
+              <div class="tabs-striped tabs-top tabs-color-dark">
+                <div class="tabs">
+                  <a href ng-click="panel.selectTab(1)" ng-class="{ active: panel.isSelected(1) }" class="tab-item">TOP</a>
 
+
+                  <a href ng-click="panel.selectTab(2)" ng-class="{ active: panel.isSelected(2) }" class="tab-item">PEOPLE</a>
+
+
+                  <a href ng-click="panel.selectTab(3)" ng-class="{ active: panel.isSelected(3) }" class="tab-item">TAGS</a>
+
+
+                  <a href ng-click="panel.selectTab(4)"  ng-class="{ active: panel.isSelected(4) }" class="tab-item">PLACES</a>
+                </div>
+              </div>
+            </section>
+            <div class="">
+              <div class="panel" ng-show="panel.isSelected(1)">
+                <h4>Description</h4>
+                <p>dkhfdkjh</p>
+              </div>
+              <div class="panel" ng-show="panel.isSelected(2)">
+                <h4>tab2</h4>
+                <p>dkhfdkjh</p>
+              </div>
+              <div class="panel" ng-show="panel.isSelected(3)">
+                <h4>tab3</h4>
+                <p>dkhfdkjh</p>
+              </div>
+              <div class="panel" ng-show="panel.isSelected(4)">
+                <h4>tab4</h4>
+                <p>dkhfdkjh</p>
+              </div>
+            </div>
         </ion-content>
     </div>
   </ion-view>
