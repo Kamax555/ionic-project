@@ -1,13 +1,28 @@
-<ion-view title="Profile Tab" id="page5">
+<ion-view title="" id="page5" ng-app="app">
   <ion-nav-buttons side="right" class="has-header">
     <button class="button button-stable icon ion-android-settings"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
-    <ion-list id="profileTab-list7">
-      <ion-item class="item-avatar" id="profileTab-list-item14">
-        <h2>user</h2>
-      </ion-item>
-    </ion-list>
+    <div id="profileTab-list7" ng-controller="HomeCtrl"  ng-init="showPosts()">
+          <table style="width:80%">
+           <tr>
+               <td rowspan="2" align="center">
+                 <div style="padding-top: 1em">
+                <img style="width: 50px;" ng-src="{{posts[0].avatar}}">
+                 </div>
+                 </td>
+              <td style="text-align: center">{{posts[0].postedTime}}<br> posts</td>
+              <td style="text-align: center">{{posts[0].postedTime}} <br> followers</td>
+              <td style="text-align: center">{{posts[0].postedTime}}<br>  following</td>
+            </tr>
+           <tr>
+           <td colspan="3"><button>Edit your profiles</button></td>
+           </tr>
+
+
+
+          </table>
+    </div>
     <div id="profileTab-button-bar3" class="button-bar">
       <button id="profileTab-button27" class="button button-light  button-block icon ion-android-apps"></button>
       <button id="profileTab-button28" class="button button-light  button-block icon ion-ios-list-outline"></button>
