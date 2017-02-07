@@ -4,13 +4,13 @@
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
     <div class="row" ng-controller="HomeCtrl"  ng-init="showPosts()">
-        <ion-item class="item-avatar item-icon-right">
-                <img style="width: 4em; height: auto; " ng-src="{{posts[0].avatar}}">
+        <ion-item class="item-avatar item-icon-right" style="border-style: none; display: block; position: static; width: 100px; height: 100px">
+                <img style="width: 80%;height: auto; max-width:100px;max-height:100px;" ng-src="{{posts[0].avatar}}">
         </ion-item>
         <div class="col col-25 no-max-width">
                <span style="text-align: center"><b>{{posts[0].posts}}</b><br> posts</span>
         </div>
-        <div class="col col-25 no-max-width">    
+        <div class="col col-25 no-max-width">
                <span style="text-align: center"><b>{{posts[0].followers}}</b> <br> followers</span>
         </div>
         <div class="col col-25 no-max-width">
