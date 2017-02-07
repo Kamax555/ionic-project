@@ -15,6 +15,9 @@ angular.module('app.controllers', ['ionic'])
                     , commenter: "TheLegend27"
                     , comment: "We have the best president!"
                     , postedTime: 20
+                    , posts: 800 
+                    , followers: 1000
+                    , following: 1
                 });
             }
         }

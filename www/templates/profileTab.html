@@ -3,25 +3,19 @@
     <button class="button button-stable icon ion-android-settings"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
-    <div id="profileTab-list7" ng-controller="HomeCtrl"  ng-init="showPosts()">
-          <table style="width:80%">
-           <tr>
-               <td rowspan="2" align="center">
-                 <div style="padding-top: 1em">
-                <img style="width: 50px;" ng-src="{{posts[0].avatar}}">
-                 </div>
-                 </td>
-              <td style="text-align: center">{{posts[0].postedTime}}<br> posts</td>
-              <td style="text-align: center">{{posts[0].postedTime}} <br> followers</td>
-              <td style="text-align: center">{{posts[0].postedTime}}<br>  following</td>
-            </tr>
-           <tr>
-           <td colspan="3"><button>Edit your profiles</button></td>
-           </tr>
-
-
-
-          </table>
+    <div class="row" ng-controller="HomeCtrl"  ng-init="showPosts()">
+        <ion-item class="item-avatar item-icon-right">
+                <img style="width: 4em; height: auto; " ng-src="{{posts[0].avatar}}">
+        </ion-item>
+        <div class="col col-25 no-max-width">
+               <span style="text-align: center"><b>{{posts[0].posts}}</b><br> posts</span>
+        </div>
+        <div class="col col-25 no-max-width">    
+               <span style="text-align: center"><b>{{posts[0].followers}}</b> <br> followers</span>
+        </div>
+        <div class="col col-25 no-max-width">
+               <span style="text-align: center"><b>{{posts[0].following}}</b><br>  following</span>
+        </div>
     </div>
     <div id="profileTab-button-bar3" class="button-bar">
       <button id="profileTab-button27" class="button button-light  button-block icon ion-android-apps"></button>
