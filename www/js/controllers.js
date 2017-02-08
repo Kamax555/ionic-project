@@ -15,7 +15,7 @@ angular.module('app.controllers', ['ionic'])
                     , commenter: "TheLegend27"
                     , comment: "We have the best president!"
                     , postedTime: 20
-                    , posts: 800 
+                    , posts: 800
                     , followers: 1000
                     , following: 1
                 });
@@ -37,14 +37,14 @@ angular.module('app.controllers', ['ionic'])
             $scope.liked = 'Like';
             $scope.likeCount -= 1;
         }
-        
+
     if($scope.likeCount <=1) {
         $scope.likes = 'like';
-    }    
+    }
     else {
         $scope.likes = 'likes';
     }
-    return likes; 
+    return likes;
 }
 })
 

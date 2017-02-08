@@ -21,11 +21,23 @@
     <div class="row">
       <button class="col col-60" style="text-align: center ;position: absolute;margin-left: 30%; margin-top: -6%">Edit your profile</button>
     </div>
+   <div id="button_panel_part" ng-controller="PanelController as panel" ng-init="panel.selectTab(1)">
+     <div id="profileTab-button-bar3" class="button-bar">
+      <button id="profileTab-button27" class="button button-light  button-block icon ion-android-apps" ng-click="panel.selectTab(1)" ng-class="{active: panel.isSelected(1)}"></button>
+      <button id="profileTab-button28" class="button button-light  button-block icon ion-ios-list-outline" ng-click="panel.selectTab(2)" ng-class="{active: panel.isSelected(2)}"></button>
+      <button id="profileTab-button29" class="button button-light  button-block icon ion-ios-person-outline" ng-click="panel.selectTab(3)" ng-class="{active: panel.isSelected(3)}"></button>
+     </div>
 
-    <div id="profileTab-button-bar3" class="button-bar">
-      <button id="profileTab-button27" class="button button-light  button-block icon ion-android-apps"></button>
-      <button id="profileTab-button28" class="button button-light  button-block icon ion-ios-list-outline"></button>
-      <button id="profileTab-button29" class="button button-light  button-block icon ion-ios-person-outline"></button>
-    </div>
+     <div class="panel" ng-show="panel.isSelected(1)">
+       <p>111</p>
+     </div>
+     <div class="panel" ng-show="panel.isSelected(2)">
+      <p>22</p>
+     </div>
+     <div class="panel" ng-show="panel.isSelected(3)">
+      <p>33</p>
+     </div>
+
+   </div>
   </ion-content>
 </ion-view>
