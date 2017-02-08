@@ -1,0 +1,7 @@
+{
+    "name": "Instagram fake app",
+    "description": "A copy of the Instagram App",
+    "repository": "https://github.com/Kamax555/ionic-project",
+    "logo": "http://pathToYourLogo.png",
+    "keywords": ["ionic", "whatever"]
+}
