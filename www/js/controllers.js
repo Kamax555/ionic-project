@@ -1,26 +1,12 @@
 angular.module('app.controllers', ['ionic'])
 
-    .controller('HomeCtrl', function ($scope) {
+    .controller('HomeCtrl', function ($http, $scope) {
         $scope.posts = [];
-        $scope.showPosts = function () {
-            for (var i = 0; i < 20; i++) {
-                $scope.posts.push({
-                    id: i
-                    , avatar: "http://trump.frost.works/images/avatar.png"
-                    , username: "DonaldTrump"
-                    , picture: "http://static6.businessinsider.com/image/55918b77ecad04a3465a0a63/nbc-fires-donald-trump-after-he-calls-mexicans-rapists-and-drug-runners.jpg"
-                    , caption: "I will make America great again!"
-                    , commentsNumber: 20
-                    , like: 1000
-                    , commenter: "TheLegend27"
-                    , comment: "We have the best president!"
-                    , postedTime: 20
-                    , posts: 800
-                    , followers: 1000
-                    , following: 1
-                });
-            }
-        }
+        
+        $http.get('https://hidden-plains-41412.herokuapp.com/posts')
+        .success(function(response) {
+            $scope.posts.push(response.data[0]);
+        });
     })
 
 .controller('LikeCtrl', function ($scope) {
