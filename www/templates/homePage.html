@@ -12,11 +12,11 @@
         <div id="homePage-button-bar1" class="button-bar">
         <div class="list card" id="homePage-card22">
             <ion-item class="item-avatar item-icon-right" id="homePage-list-item8">
-                <img src="{{posts[$index].avatar}}">
+                <img src="{{post.avatar}}">
                 <h2 style="font-size: 0.8em">{{post.username}}</h2>
                 <i class="icon ion-android-more-vertical"></i>
             </ion-item>
-            <img ng-src="{{posts[$index].picture}}" style="width:100%" />
+            <img ng-src="{{post.picture}}" style="width:100%" />
         </div>
         </div>
         <div  ng-controller="LikeCtrl">

@@ -5,7 +5,11 @@ angular.module('app.controllers', ['ionic'])
         
         $http.get('https://hidden-plains-41412.herokuapp.com/posts')
         .success(function(response) {
-            $scope.posts.push(response.data[0]);
+            for(i=0; i<response.data.length; i++)
+                {
+                    $scope.posts.push(response.data[i]);
+                }
+            
         });
     })
 
