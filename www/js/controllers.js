@@ -52,6 +52,21 @@ angular.module('app.controllers', ['ionic'])
 
   })
 
+ .controller('CommentController', function ($scope) {
+                $scope.comment = [];
+                $scope.user = 'DonaldTrump';
+                $scope.btn_add = function() {
+                    if($scope.txtcomment !=''){
+                    $scope.comment.push($scope.txtcomment);
+                    $scope.txtcomment = ""; 
+                    }
+                }
+ 
+                $scope.remItem = function($index) {
+                    $scope.comment.splice($index, 1);
+                }
+            })
+
 
   .controller('homePageCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
