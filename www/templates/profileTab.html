@@ -2,8 +2,8 @@
   <ion-nav-buttons side="right" class="has-header">
     <button class="button button-stable icon ion-android-settings"></button>
   </ion-nav-buttons>
-  <ion-content padding="true" class="has-header">
-    <div class="row" ng-controller="HomeCtrl"  ng-init="showPosts()">
+  <ion-content padding="true" class="has-header"  ng-controller="HomeCtrl">
+    <div class="row"  ng-init="showPosts()">
         <ion-item class="item-avatar item-icon-right" style="border-style: none; display: block; position: static; width: 100px; height: 100px">
           <img style="width: 80%;height: auto; max-width:100px;max-height:100px;" ng-src="{{posts[0].avatar}}">
         </ion-item>
@@ -29,10 +29,20 @@
      </div>
 
      <div class="panel" ng-show="panel.isSelected(1)">
-       <p>111</p>
+       <ion-item>
+         <img ng-src="{{posts[0].picture}}" style="width:32.3333%" />
+       </ion-item>
      </div>
      <div class="panel" ng-show="panel.isSelected(2)">
-      <p>22</p>
+       <div class="list card" id="homePage-card22">
+         <ion-item class="item-avatar item-icon-right" id="homePage-list-item8">
+           <img src="{{posts[0].avatar}}">
+           <h2 style="font-size: 0.8em">{{posts[0].username}}</h2>
+           <i class="icon ion-android-more-vertical"></i>
+         </ion-item>
+         <img ng-src="{{posts[0].picture}}" style="width:100%" />
+         <p style="display:inline"><b>{{posts[0].username}}</b> &nbsp; {{posts[0].caption}}</p>
+       </div>
      </div>
      <div class="panel" ng-show="panel.isSelected(3)">
       <p>33</p>
